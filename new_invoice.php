@@ -18,7 +18,7 @@
     <div id="add_new_customer_model">
       <div class="modal-dialog">
       	<div class="modal-content">
-      		<div class="modal-header" style="background-color: #ff5252; color: white">
+      		<div class="modal-header" style="background-color: #9834da; color: white">
             <div class="font-weight-bold">Add New Customer</div>
       			<button class="close" style="outline: none;" onclick="document.getElementById('add_new_customer_model').style.display = 'none';"><i class="fa fa-close"></i></button>
       		</div>
@@ -165,7 +165,7 @@
 
         </div>
         <!-- form content end -->
-        <hr style="border-top: 2px solid #ff5252;">
+        <hr style="border-top: 2px solid #9834da;">
       </div>
     </div>
 

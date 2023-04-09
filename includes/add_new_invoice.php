@@ -216,7 +216,7 @@ function addNewInvoice()
 {
   $customer_id = getCustomerId(strtoupper($_GET['customers_name']), $_GET['customers_contact_number']);
   $invoice_date = $_GET['invoice_date'];
-  $payment_status = ($_GET['payment_type'] == "");
+  // $payment_status = ($_GET['payment_type'] == "");
   $total_amount = $_GET['total_amount'];
   $total_discount = $_GET['total_discount'];
   $net_total = $_GET['net_total'];

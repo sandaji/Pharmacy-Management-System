@@ -167,7 +167,7 @@ function searchMedicineStock($text, $column)
 {
   require "dbConfig.php";
   if ($con) {
-    $seq_no = 1;
+    $seq_no = 0;
 
     if ($column == "EXPIRY_DATE")
       $query = "SELECT * FROM medicines INNER JOIN medicines_stock ON medicines.NAME = medicines_stock.NAME";
@@ -181,12 +181,17 @@ function searchMedicineStock($text, $column)
     if ($column == 'EXPIRY_DATE') {
       while ($row = mysqli_fetch_array($result)) {
         $expiry_date = $row['EXPIRY_DATE'];
+         $seq_no++;
         if (substr($expiry_date, 3) < date('y'))
+        
           showMedicineStockRow($seq_no, $row);
+          
         else if (substr($expiry_date, 3) == date('y')) {
           if (substr($expiry_date, 0, 2) < date('m'))
             showMedicineStockRow($seq_no, $row);
+         
         }
+        
       }
     } else {
       while ($row = mysqli_fetch_array($result)) {
