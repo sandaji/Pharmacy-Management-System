@@ -52,7 +52,7 @@ function showPurchaseRow($seq_no, $row) {
     <td><?php echo $seq_no; ?></td>
     <td><?php echo $row['PURCHASE_DATE']; ?></td>
     <td><?php echo $row['VOUCHER_NUMBER']; ?></td>
-    <td><?php echo $row['INVOICE_ID']; ?></td>
+    <td><?php echo $row['INVOICE_NUMBER']; ?></td>
     <td><?php echo $row['SUPPLIER_NAME'] ?></td>
     <td><?php echo $row['TOTAL_AMOUNT']; ?></td>
   </tr>
@@ -83,7 +83,7 @@ function showSales($start_date, $end_date) {
     $result = mysqli_query($con, $query);
     while($row = mysqli_fetch_array($result)) {
       $seq_no++;
-      //print_r($row);
+      print_r($row);
       showSalesRow($seq_no, $row);
       $total = $total + $row['NET_TOTAL'];
     }
